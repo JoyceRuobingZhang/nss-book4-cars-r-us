@@ -1,0 +1,30 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Patua One", serif;
+    letter-spacing: 2px;
+    color: rgb(9, 53, 97);
+}
+
+.cars_info {
+    display: flex;
+    flex-basis: 24%;
+    margin: 0 2rem;
+}
+
+.option {
+    flex-basis: 24%;
+    margin: 0 2rem;
+    border: 1px dashed dodgerblue;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0.25rem;
+}
