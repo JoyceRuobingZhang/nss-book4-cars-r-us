@@ -29,7 +29,7 @@ document.addEventListener("change", e => {
 document.addEventListener("change", e => {
     for (const wheel of wheels) {
         if (e.target.name === `wheel--${wheel.id}`) {
-            setWheel(`${wheel.id}`)
+            setWheel(wheel.id) //不能写成 setWheel(`${wheel.id}`) 因为这样id 就不再是数字了，而变成了string。
         }
     }
 })

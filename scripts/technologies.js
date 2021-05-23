@@ -30,7 +30,7 @@ document.addEventListener("change", e => {
 document.addEventListener("change", e => {
     for (const technology of technologies) {
         if (e.target.name === `technology--${technology.id}`) {
-            setTechnology(`${technology.id}`)
+            setTechnology(technology.id) //不能写成 setTechnology(`${technology.id}`) 因为这样id 就不再是数字了，而变成了string。
         }
     }
 })

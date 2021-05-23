@@ -1,6 +1,7 @@
 import { Colors } from "./paint-colors.js"
 import { Technologies } from "./technologies.js"
 import { Wheels } from "./wheels.js"
+import { Orders } from "./orders.js"
 
 export const carsInfo = () => {
     return `
@@ -25,9 +26,10 @@ export const carsInfo = () => {
     create custom order
     </button>
 
-    <article class="cusdom_order">
+    <article class="custom_order">
         <section class="orders">
             <h2>Custom Car Orders</h2>
+            ${Orders()}
         </section>
     </article>
     `

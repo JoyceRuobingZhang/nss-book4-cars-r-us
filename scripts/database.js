@@ -1,3 +1,6 @@
+import { renderHtml } from "./main.js"
+
+
 const database = {
     paintColors: [{
             id: 1,
@@ -62,12 +65,8 @@ const database = {
             price: 1100
         }
     ],
-    customOrder: [
-        {}
-    ],
-    orderBuilder: {
-
-    }
+    customOrders: [],
+    orderBuilder: {}
 }
 
 export const setPaintColor = (id) => {
@@ -92,3 +91,24 @@ export const getTechnologies = () => {
 export const getWheels = () => {
     return database.wheels.map(wheel => ({...wheel }))
 }
+export const getCustomOrders = () => {
+    return database.customOrders.map(customOrder => ({...customOrder }))
+}
+
+
+//add state object "orderBuilder{}" to the state array "customOrders[]"
+export const addCustomOrder = () => {
+    if (database.orderBuilder.colorId && database.orderBuilder.technologyId && database.orderBuilder.wheelId) {
+        database.orderBuilder.id = database.customOrders.length + 1
+        database.orderBuilder.timestamp = Date.now()
+        database.customOrders.push(database.orderBuilder)
+            /*   ❗️🟡❗️🟡❗️下面两步很重要！
+            首先：要reset orderBuilder state object; 
+            然后：要重新 renderHtml() 才能reload order的html.    */
+        database.orderBuilder = {}
+        renderHtml()
+    }
+}
+
+
+console.log(database.paintColors[0].id)
