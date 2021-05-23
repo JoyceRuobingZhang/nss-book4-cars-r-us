@@ -21,6 +21,10 @@ export const carsInfo = () => {
         </section>
     </article>
 
+    <button id="order-button">
+    create custom order
+    </button>
+
     <article class="cusdom_order">
         <section class="orders">
             <h2>Custom Car Orders</h2>

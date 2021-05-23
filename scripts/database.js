@@ -70,14 +70,14 @@ const database = {
     }
 }
 
-export const setPaintColor = () => {
-
+export const setPaintColor = (id) => {
+    database.orderBuilder.colorId = id
 }
-export const setTechnology = () => {
-
+export const setTechnology = (id) => {
+    database.orderBuilder.technologyId = id
 }
-export const setWheel = () => {
-
+export const setWheel = (id) => {
+    database.orderBuilder.wheelId = id
 }
 
 
